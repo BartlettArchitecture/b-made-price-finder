@@ -162,7 +162,26 @@ h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.025em;line-he
 .btn:disabled{opacity:.4;cursor:default}
 .emptycart{padding:40px 0;text-align:center;color:var(--muted)}
 .note{font-size:12.5px;color:var(--ok);margin:10px 0 0;text-align:center;min-height:1em}
-@media (max-width:520px){
+.page{position:relative;padding-bottom:80px}
+.bottomline{
+  position:absolute;
+  bottom:18px;
+  left:0;
+  right:0;
+  margin:0;
+  padding:0 16px;
+  text-align:center;
+  font-family:var(--display);
+  font-size:13px;
+  line-height:1.4;
+  color:var(--muted);
+  opacity:.85;
+}
+.bottomline a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.bottomline a:hover{color:var(--ink)}
+  @media (max-width:520px){
+  .bottomline{font-size:12px;bottom:14px}
+  .page{padding-bottom:70px}  
   .page{padding:26px 16px 60px}
   .mats{gap:16px 6px}
   .mat{width:82px}
@@ -180,7 +199,6 @@ h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.025em;line-he
 </style>
 </head>
 <body>
-  <p class="topline">This site was created by Chloe Bong and maintained by the <a href="mailto:virtualbmade@live.ucl.ac.uk?subject=B-made%20Price%20Finder">B-made</a> team.</p>
 <main class="page">
   <div class="inner">
     <header class="hero">
@@ -201,6 +219,7 @@ h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.025em;line-he
         <div class="chips" id="groups"></div>
         <div class="subs" id="subs" hidden></div>
       </div>
+
       <div class="head">
         <h2 id="heading"></h2>
         <div class="meta"><span id="count"></span>
@@ -218,6 +237,7 @@ h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.025em;line-he
       <p class="legend"><span class="site">HE</span> Here East only <span class="site">GS</span> 22 Gordon Street only. Items without a label are stocked at both sites or not yet confirmed.</p>
     </section>
   </div>
+  <p class="bottomline">This price finder was created by Chloe Bong and is maintained by the <a href="mailto:virtualbmade@live.ucl.ac.uk?subject=B-made%20Price%20Finder">B-made</a> team.</p
 </main>
 
 <button class="bag" id="bag" type="button" aria-label="Open my list">
